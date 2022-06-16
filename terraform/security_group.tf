@@ -40,7 +40,7 @@ resource "aws_security_group" "db_sg" {
   vpc_id      = aws_vpc.this.id
 
   ingress {
-    description      = "HTTP From Anywhere"
+    description      = "RDS From Web"
     from_port        = 3306
     to_port          = 3306
     protocol         = "tcp"
