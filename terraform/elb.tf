@@ -17,9 +17,9 @@ resource "aws_lb_target_group" "lb_target" {
   port     = 80
   protocol = "HTTP"
   vpc_id   = aws_vpc.this.id
-	health_check {
-		enabled = true
-		path = "/wp-admin/install.php"
-		healthy_threshold = 5
-	}
+  health_check {
+    enabled           = true
+    path              = "/wp-admin/install.php"
+    healthy_threshold = 5
+  }
 }

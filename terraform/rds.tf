@@ -1,5 +1,5 @@
 resource "aws_db_instance" "default" {
-	identifier = "${local.product}-${local.environment}"
+  identifier           = "${local.product}-${local.environment}"
   allocated_storage    = 20
   engine               = "mysql"
   engine_version       = "8.0.28"
@@ -9,7 +9,7 @@ resource "aws_db_instance" "default" {
   password             = "Dummy12345" # TODO: You NEED to change db password
   parameter_group_name = "default.mysql8.0"
   skip_final_snapshot  = true
-	db_subnet_group_name =  aws_db_subnet_group.db_subnet.name
+  db_subnet_group_name = aws_db_subnet_group.db_subnet.name
 }
 
 resource "aws_db_subnet_group" "db_subnet" {
